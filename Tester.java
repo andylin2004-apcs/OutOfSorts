@@ -12,12 +12,12 @@ public class Tester{
       testCaseResult[i] = testCase[i];
     }
 
-    System.out.println(Arrays.toString(testCase));
+    // System.out.println(Arrays.toString(testCase));
 
     Sorts.bubbleSort(testCaseResult);
 
     Arrays.sort(testCase);
-    System.out.println(Arrays.toString(testCase));
+    // System.out.println(Arrays.toString(testCase));
 
     System.out.println(Arrays.toString(testCase).equals(Arrays.toString(testCaseResult)));
   }
