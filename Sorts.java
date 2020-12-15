@@ -6,11 +6,14 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data){
-    for (int i = 1; i<data.length; i++){
-      if (data[i-1] > data[i]){
-        int temp = data[i];
-        data[i] = data[i-1];
-        data[i-1] = temp;
+    Boolean sorted = false;
+    for (int v = 0; v<data.length; v++){
+      for (int i = 1; i<data.length-v; i++){
+        if (data[i-1] > data[i]){
+          int temp = data[i];
+          data[i] = data[i-1];
+          data[i-1] = temp;
+        }
       }
     }
     System.out.println(Arrays.toString(data));
