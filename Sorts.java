@@ -6,7 +6,6 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data){
-    Boolean sorted = false;
     for (int v = 0; v<data.length; v++){
       for (int i = 1; i<data.length-v; i++){
         if (data[i-1] > data[i]){
@@ -16,6 +15,18 @@ public class Sorts{
         }
       }
     }
-    // System.out.println(Arrays.toString(data));
+  }
+  public static void selectionSort(int[] data){
+    for (int i = 0; i<data.length; i++){
+      int min = i;
+      for (int v = i+1; v<data.length; v++){
+        if (data[v] < data[min]){
+          min = v;
+        }
+      }
+      int temp = data[i];
+      data[i] = data[min];
+      data[min] = temp;
+    }
   }
 }
