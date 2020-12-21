@@ -32,7 +32,11 @@ public class Driver{
           randData[i] = rng.nextInt()%1000;
         }
         Arrays.sort(randData);
-        // Arrays.reverse(randData);
+        for (int i = 0; i<randData.length/2; i++){
+          int temp = randData[i];
+          randData[i] = randData[randData.length - i - 1];
+          randData[randData.length - i - 1] = temp;
+        }
       }
 
       if(args[1].equals("bubble")){
