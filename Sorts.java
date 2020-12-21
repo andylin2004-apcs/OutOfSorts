@@ -16,6 +16,7 @@ public class Sorts{
       }
     }
   }
+
   public static void selectionSort(int[] data){
     for (int i = 0; i<data.length; i++){
       int min = i;
@@ -29,4 +30,19 @@ public class Sorts{
       data[min] = temp;
     }
   }
+
+  public static void insertionSort(int[] data){
+    for(int i = 1; i<data.length; i++){
+      if (data[i] < data[i-1]){
+        int move = data[i];
+        int v = i - 1;
+        while(v>=0 && data[v] > move){
+          data[v+1] = data[v];
+          v--;
+        }
+        data[v+1] = move;
+      }
+    }
+  }
+
 }
